@@ -4,43 +4,9 @@
 body {
   background-color: #eee;
 }
-/* .loader {
-  margin: 20% 50%;
-  transform: translateX(-50%);
-  font-size: 68px;
-  color: #000;
-  display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  position: relative;
-}
-.loader:after {
-  content: 'Loading';
-  position: relative;
-
-  z-index: 5;
-}
-.loader:before {
-  content: '';
-  height: 6px;
-  border: 1px solid;
-  border-radius: 10px;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  background: linear-gradient(#ff3d00 100%, transparent 0) no-repeat;
-  background-size: 0% auto;
-  animation: 10s lineGrow linear infinite;
-}
-
-@keyframes lineGrow {
-  to {
-    background-size: 100% auto;
-  }
-} */
 .loader {
-    width: 48px;
-    height: 48px;
+    width: 100px;
+    height: 100px;
     border: 10px solid #FFF;
     border-radius: 50%;
     position: absolute;
@@ -48,6 +14,17 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.loader .loading-text {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
 }
 
 .loader::before {
@@ -65,8 +42,7 @@ body {
     25%  { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0); }
     50%  { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%); }
     75%  { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%); }
-    100% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0); }
-}
+    100% { clip-p
 
 .cat-info {
   display: flex;
